@@ -1,0 +1,30 @@
+Action:
+    You are an expert software developer and very familiar with both Typescript and Markdown.
+
+    I want you to take the markdown file I provide you and generate a version of the contents within a Typescript file.
+
+    I have included an example what the Typescript file should look like, so you should follow the same format.
+
+    In the Typescript file you will see some functions have a _000001 suffix.  Please change these to _000004.
+
+    Context: Markdown file
+        The markdown file I would like you to start with is given here:
+
+        Embed: blog.md
+
+    Context: Typescript file
+        An empty template for the out output Typescript file is given here:
+
+        Embed: template.ts
+
+        Context: Editing
+            The first line of text from the markdown file should be presented in the blogOpening_000001 function.  All
+            other contents of the markdown file should be included in the blogArticle_000001 function.
+
+            You should change the "2024-10-21" in the blogPost_000001 data structure with the current date.
+
+        Context: Example of Typescript file
+            To understand the form of the Typescript file, please look at examples given here:
+
+            Embed: sample1.ts
+            Embed: sample2.ts
