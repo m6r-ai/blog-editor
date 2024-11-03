@@ -18,13 +18,19 @@ Action:
         Embed: template.ts
 
         Context: Editing
-            The first line of text from the markdown file should be presented in the blogOpening_000001 function.  All
-            other contents of the markdown file should be included in the blogArticle_000001 function.
+            All then contents of the markdown file should be included in the blogArticle_000001 function.
 
             You should change the "2024-10-21" in the blogPost_000001 data structure with the current date.
 
-        Context: Example of Typescript file
+        Context: Examples of Typescript file
             To understand the form of the Typescript file, please look at examples given here:
 
             Embed: sample1.ts
             Embed: sample2.ts
+
+        Context: Code formatting
+            In the output file, do not allow any of the lines of output code to exceed 130 characters.  If you need to
+            split a line, do so at the start of a new word, leaving any blank space on the end of the previous line.
+
+        Context: Comments
+            Do not add any new comments to the code.

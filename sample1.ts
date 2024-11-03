@@ -1,115 +1,73 @@
 import {h, VElement} from '../../lib/dvdi';
 import {BlogPost} from '../BlogPost';
 
-function blogOpening_000002(): VElement[] {
+function blogArticle_000001(): VElement[] {
     return [
         h('p', {},
-            'For a few months Dave has been looking at what Generative AI could do.  He believed that he could build ' +
-            'software from scratch without having to write the code himself.  He had built a prototype of a new language ' +
-            'and a prompt generator that could take detailed requirements and turn them into working software.'
+            'I\'m excited to announced the founding of M6R.  For the last year I\'ve been increasingly optimistic ' +
+            'about being able to build large and complex software solutions using AI.  Now it\'s time to make that a reality!'
         ),
         h('p', {},
-            'I was sceptical, so I asked him to prove it.'
-        )
-    ]
-}
-
-function blogArticle_000002(): VElement[] {
-    return [
+            'Across the industry we\'ve seen a huge race to add AI capabilities to our software tools.  However, at M6R ' +
+            'we\'re taking a different approach.  We believe the way forward is to embrace an ',
+            h('b', {}, 'AI First'),
+            ' approach.'
+        ),
         h('section', {},
-            h('h2', {}, 'Posing a problem'),
+            h('h2', {}, 'AI First'),
             h('p', {},
-                'I asked Dave to create a program for me that could turn a photograph into a Lego-style mosaic.  I ' +
-                'didn\'t just want a picture, I wanted to be able to build the picture using base plates and bricks.  The ' +
-                'first working prototype of a mosaic picture was generated in less than 90 mins.  It took a couple of hours ' +
-                'of refining things to get to what you see below.'
+                'What do we mean by AI First?  It means we imagine a future in which we have entirely new AI-powered ' +
+                'tools that will make it far easier to turn ideas into high quality software.'
             ),
             h('p', {},
-                'Once I had sourced the bricks and base plates, I created a colour palate for the bricks I had and updated ' +
-                'the colours in the JSON config file.'
-            ),
-            h('p', {},
-                'The results were amazing!'
+                'The software we produce only makes sense because we can power it with AI.'
             )
         ),
         h('section', {},
-            h('h2', {}, 'The results'),
+            h('h2', {}, 'Built with AI, imagined and designed by you'),
             h('p', {},
-                'Here\'s the original photo and the computer-generated sketch of what the mosaic would look like - it\'s ' +
-                'worth standing back from the screen a little to see the full effect:'
-            ),
-            h('div', {className: 'figure-pair'},
-                h('figure', {},
-                    h('img', {
-                        src: '/blog/000002-Convincing-a-sceptic/original.webp',
-                        alt: 'The original photo',
-                        width: 512,
-                        height: 'auto'
-                    }),
-                ),
-                h('figure', {},
-                    h('img', {
-                        src: '/blog/000002-Convincing-a-sceptic/mosaic.png',
-                        alt: 'The computer-generated mosaic image',
-                        width: 512,
-                        height: 'auto'
-                    }),
-                )
+                'AI can do incredible things, but it has to have a reason to do them.  That reason ' +
+                'is you!  Human curiosity and creativity far exceeds our current ability to turn those ideas into working ' +
+                'software.'
             ),
             h('p', {},
-                'The software also generates a \"picking list\", showing how many of each tile is required, and construction ' +
-                'plans - here are examples of both (the example construction plan is for the top-left quadrant of the image):'
-            ),
-            h('div', {className: 'figure-pair'},
-                h('figure', {},
-                    h('img', {
-                        src: '/blog/000002-Convincing-a-sceptic/picking-list.png',
-                        alt: 'A \"picking list\" of numbers of each type of tile required.',
-                        width: 256,
-                        height: 'auto'
-                    }),
-                ),
-                h('figure', {},
-                    h('img', {
-                        src: '/blog/000002-Convincing-a-sceptic/tile-map-0-0.png',
-                        alt: 'A construction plan for one of the 32x32 base plates',
-                        width: 768,
-                        height: 'auto'
-                    }),
-                )
-            ),
-            h('p', {},
-                'And finally, after about 10 hours to build it, here\'s the finished mosaic, stuck to the whiteboard in ' +
-                'Dave\'s office:'
-            ),
-            h('figure', {},
-                h('img', {
-                    src: '/blog/000002-Convincing-a-sceptic/finished-mosaic.webp',
-                    alt: 'The finished mosaic',
-                    width: 1024,
-                    height: 'auto'
-                }),
+                'All ideas start with a problem to be solved.  For us, that problem is "how do we turn ideas into ' +
+                'software far more quickly and at a far lower cost than we could do conventionally?"  This is an ' +
+                'ambitious goal, and we don\'t expect you to believe we can do this without some really compelling ' +
+                'demonstrations.  Most of what you\'re seeing on this website is a demonstration though.  We\'ve used ' +
+                'early versions of our tooling to build large parts of it.'
             )
         ),
         h('section', {},
-            h('h2', {}, 'Fast forward to Metaphor'),
+            h('h2', {}, 'Metaphor: powering an AI First approach'),
             h('p', {},
-                'The prototype language has changed quite a lot since then.  It\'s now called Metaphor, and it\'s the basis ' +
-                'of what we\'re now doing at M6R.'
+                'The first capability we\'re bringing to you is a simple language called Metaphor (yes, that\'s ',
+                h('b', {}, 'M'),
+                ', ',
+                h('b', {}, '6'),
+                ' letters, ',
+                h('b', {}, 'R'),
+                ').  It exemplifies our AI First approach and allows you to describe problems and capture elements of a ' +
+                'solution in a way that lets AI build the software.'
+            ),
+            h('p', {},
+                'One important aspect of Metaphor is we\'re using it to improve itself.  Aside from the original prototype, ' +
+                'each part of the Metaphor toolchain has been built this way.'
+            ),
+            h('p', {},
+                'We\'ll be releasing an early version in a few days time and watch out for some demos of things we\'ve built ' +
+                'this way.  We can\'t wait to see what you can build with it.'
             )
         )
     ];
 }
 
-export const blogPost_000002 = new BlogPost(
-    'Convincing a sceptic',
-    'Eluned Hudson',
-    '2024-10-22',
-    '/blog/000002-Convincing-a-sceptic',
-    'How Dave persuaded me that Metaphor could change the way people build software.',
+export const blogPost_000001 = new BlogPost(
+    'Founding M6R',
+    'Dave Hudson',
+    '2024-10-21',
+    '/blog/000001-Founding-M6R',
+    'An introduction to what we\'re going to be doing at M6R.',
     null,
-    null,
-    blogOpening_000002,
-    blogArticle_000002,
-    null
+    blogArticle_000001
 );

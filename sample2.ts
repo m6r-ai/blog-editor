@@ -1,148 +1,107 @@
 import {h, VElement} from '../../lib/dvdi';
 import {BlogPost} from '../BlogPost';
 
-function blogOpening_000003(): VElement[] {
+function blogArticle_000002(): VElement[] {
     return [
         h('p', {},
-            'AI is rapidly changing the way we build software.  It offers expert advice tailored to developers\' needs and can ' +
-            'quickly automate many tasks.  While impressive, these tools are still focused on implementing software in the ' +
-            'programming languages we would use if AI didn\'t exist.'
+            'For a few months Dave has been looking at what Generative AI could do.  He believed that he could build ' +
+            'software from scratch without having to write the code himself.  He had built a prototype of a new language ' +
+            'and a prompt generator that could take detailed requirements and turn them into working software.'
         ),
         h('p', {},
-            'Throughout the history of software engineering, the most significant productivity improvements have come when we ' +
-            'move to a higher level of design.  So, today, I\'m announcing the first public version of a simple new language, ' +
-            'Metaphor, that helps make that move to a new higher-level of design.'
-        )
-    ]
-}
-
-function blogArticle_000003(): VElement[] {
-    return [
+            'I was sceptical, so I asked him to prove it.'
+        ),
         h('section', {},
-            h('h2', {}, 'What problem is it solving?'),
+            h('h2', {}, 'Posing a problem'),
             h('p', {},
-                'Like people, AI agents cannot do things without clear, detailed instructions.  If we give ambiguous, ' +
-                'incomplete, or conflicting instructions, they become confused and do unexpected things.  Unlike people, ' +
-                'though, they usually won\'t tell you they\'re confused unless you ask them.'
+                'I asked Dave to create a program for me that could turn a photograph into a Lego-style mosaic.  I ' +
+                'didn\'t just want a picture, I wanted to be able to build the picture using base plates and bricks.  The ' +
+                'first working prototype of a mosaic picture was generated in less than 90 mins.  It took a couple of hours ' +
+                'of refining things to get to what you see below.'
             ),
             h('p', {},
-                'Metaphor is designed to let you progressively build precise and unambiguous requirements so AI agents ' +
-                'can generate software and documentation.  Instead of you and your team focusing on how you build software, ' +
-                'you can concentrate on what you want and how you want it to behave.'
+                'Once I had sourced the bricks and base plates, I created a colour palate for the bricks I had and updated ' +
+                'the colours in the JSON config file.'
+            ),
+            h('p', {},
+                'The results were amazing!'
             )
         ),
         h('section', {},
-            h('h2', {}, 'How does it work?'),
+            h('h2', {}, 'The results'),
             h('p', {},
-                'Metaphor has a very simple structure.  Within this structure, Metaphor uses natural language.'
+                'Here\'s the original photo and the computer-generated sketch of what the mosaic would look like - it\'s ' +
+                'worth standing back from the screen a little to see the full effect:'
             ),
-            h('p', {},
-                'In this v0.1 release, there are just 5 keywords!  These are:'
-            ),
-            h('ul', {},
-                h('li', {},
-                    h('code', {}, 'Action:'),
-                    ' the action we want the agent to perform.'
+            h('div', {className: 'figure-pair'},
+                h('figure', {},
+                    h('img', {
+                        src: '/blog/000002-Convincing-a-sceptic/original.webp',
+                        alt: 'The original photo',
+                        width: 512,
+                        height: 'auto'
+                    }),
                 ),
-                h('li', {},
-                    h('code', {}, 'Context:'),
-                    ' information that will be required by the AI agent to do its work.'
-                ),
-                h('li', {},
-                    h('code', {}, 'Embed:'),
-                    ' embed another file into the current metaphor file as part of the context.'
-                ),
-                h('li', {},
-                    h('code', {}, 'Include:'),
-                    ' pull other metaphor files into the current metaphor file.'
-                ),
-                h('li', {},
-                    h('code', {}, 'Role:'),
-                    ' the role to be taken by an AI agent (this is a placeholder for now but will be used later).'
+                h('figure', {},
+                    h('img', {
+                        src: '/blog/000002-Convincing-a-sceptic/mosaic.png',
+                        alt: 'The computer-generated mosaic image',
+                        width: 512,
+                        height: 'auto'
+                    }),
                 )
             ),
             h('p', {},
-                'The idea is to gather all the essential elements of a software design in one place.  This includes design ' +
-                'considerations that would typically come from many different disciplines.  For example, it can capture ' +
-                'ideas that usually originate with product managers, software engineers, QA analysts, security experts, and ' +
-                'more.'
+                'The software also generates a \"picking list\", showing how many of each tile is required, and construction ' +
+                'plans - here are examples of both (the example construction plan is for the top-left quadrant of the image):'
             ),
-            h('p', {},
-                'Once read, this is compiled into a "large context prompt" (LCP) for one or more backend AI agents to ' +
-                'process.  An LCP is designed to provide all the information an AI agent needs to perform an action.  ' +
-                'Examples of actions might be reviewing requirements for ambiguity, reviewing some existing software against ' +
-                'a requirement, or building something completely new.'
-            ),
-            h('p', {},
-                'Metaphor is designed to capture everything within the LCP, so there\'s no need to rely on a continued ' +
-                'dialogue or fine-tuned learning in any AI large language model (LLM).  This also makes it easy to discard ' +
-                'anything that doesn\'t work as desired and try out new ideas.'
-            ),
-            h('p', {},
-                'Modular designs are vital in software development, so Metaphor descriptions can be broken into modular ' +
-                'components (',
-                h('code', {}, '.m6r'),
-                ' files).  This makes it easy to build library-like elements that can be reused between projects or ' +
-                'leverage a project description for many different actions.'
-            ),
-        ),
-        h('section', {},
-            h('h2', {}, 'Initial release'),
-            h('p', {},
-                'The Metaphor prompt compiler, ',
-                h('code', {}, 'm6rc'),
-                ', is being released under an Apache 2.0 open-source software license to encourage you to experiment with ' +
-                'it and to give you the chance to contribute to it.'
-            ),
-            h('p', {},
-                'This is a v0.1 release, so you can expect the language and the tools to evolve quickly over the next few ' +
-                'months.'
-            ),
-            h('p', {},
-                'The software is available on GitHub at: ',
-                h('a', {
-                        href: 'https://github.com/m6r-ai/m6rc',
-                        target: '_blank',
-                        title: 'M6RC git repository on GitHub'
-                    },
-                    'github.com/m6r-ai/m6rc'
+            h('div', {className: 'figure-pair'},
+                h('figure', {},
+                    h('img', {
+                        src: '/blog/000002-Convincing-a-sceptic/picking-list.png',
+                        alt: 'A \"picking list\" of numbers of each type of tile required.',
+                        width: 256,
+                        height: 'auto'
+                    }),
+                ),
+                h('figure', {},
+                    h('img', {
+                        src: '/blog/000002-Convincing-a-sceptic/tile-map-0-0.png',
+                        alt: 'A construction plan for one of the 32x32 base plates',
+                        width: 768,
+                        height: 'auto'
+                    }),
                 )
             ),
             h('p', {},
-                'There\'s also a discussion forum over on Google Groups: ',
-                h('a', {
-                        href: 'https://groups.google.com/g/metaphor-language',
-                        target: '_blank',
-                        title: 'metaphor-language discussion group'
-                    },
-                    'groups.google.com/g/metaphor-language'
-                )
-            ),
-            h('p', {},
-                'I look forward to seeing what you can build with Metaphor!'
+                'And finally, after about 10 hours to build it, here\'s the finished mosaic, stuck to the whiteboard in ' +
+                'Dave\'s office:'
             ),
             h('figure', {},
                 h('img', {
-                    src: '/blog/000003-Introducing-Metaphor/metaphor-whiteboard.webp',
-                    alt: 'A photo of the whiteboard notes for this release of Metaphor.',
-                    width: 3450,
-                    height: 2361
+                    src: '/blog/000002-Convincing-a-sceptic/finished-mosaic.webp',
+                    alt: 'The finished mosaic',
+                    width: 1024,
+                    height: 'auto'
                 }),
-                h('figcaption', {}, 'The whiteboard notes for Metaphor v0.1')
+            )
+        ),
+        h('section', {},
+            h('h2', {}, 'Fast forward to Metaphor'),
+            h('p', {},
+                'The prototype language has changed quite a lot since then.  It\'s now called Metaphor, and it\'s the basis ' +
+                'of what we\'re now doing at M6R.'
             )
         )
     ];
 }
 
-export const blogPost_000003 = new BlogPost(
-    'Introducing Metaphor: an AI First software development language',
-    'Dave Hudson',
-    '2024-11-01',
-    '/blog/000003-Introducing-Metaphor',
-    'Introducing Metaphor: an AI First software development language.',
-    '/blog/000003-Introducing-Metaphor/metaphor-whiteboard.webp',
+export const blogPost_000002 = new BlogPost(
+    'Convincing a sceptic',
+    'Eluned Hudson',
+    '2024-10-22',
+    '/blog/000002-Convincing-a-sceptic',
+    'How Dave persuaded me that Metaphor could change the way people build software.',
     null,
-    blogOpening_000003,
-    blogArticle_000003,
-    null
+    blogArticle_000002
 );
