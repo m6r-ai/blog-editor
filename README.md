@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is an example of using Metaphor to build a tool that is used to create blog post entries for the [m6r.ai](m6r.ai)
+This is an example of using Metaphor to build a tool that is used to create blog post entries for the [m6r.ai](https://m6r.ai)
 website.  The aim is to take a markdown file, `blog.md` and have a large language model (LLM) generate the same content
 as TypeScript code.
 
