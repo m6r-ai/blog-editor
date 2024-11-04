@@ -57,7 +57,7 @@ Isn't this fun?
 
 Both ChatGPT 4o and Claude 3.5 Sonnet give us the correct form of output.  The only difference is ChatGPT uses an `em`
 tag, where Claude uses an `i` tag.  According to the original Markdown spec
-(see: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown) this should probably be `em`,
+(see: [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown)) this should probably be `em`,
 but a minor addition to the Metaphor description can make this the same for all implementations (you might try it as an
 exmple).
 
