@@ -1,18 +1,20 @@
-Action:
+Role:
     You are an expert software developer and very familiar with both Typescript and Markdown.
 
+Action:
     I want you to take the markdown file I provide you and generate a version of the contents within a Typescript file.
 
     I have included an example what the Typescript file should look like, so you should follow the same format.
 
     In the Typescript file you will see some functions have a _000001 suffix.  Please change these to _000004.
 
+Context: Files
     Context: Markdown file
         The markdown file I would like you to start with is given here:
 
         Embed: blog.md
 
-    Context: Typescript file
+    Context: Typescript files
         An empty template for the out output Typescript file is given here:
 
         Embed: template.ts
@@ -25,8 +27,7 @@ Action:
         Context: Examples of Typescript file
             To understand the form of the Typescript file, please look at examples given here:
 
-            Embed: sample1.ts
-            Embed: sample2.ts
+            Embed: *.ts
 
         Context: Code formatting
             In the output file, do not allow any of the lines of output code to exceed 130 characters.  If you need to
